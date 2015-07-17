@@ -1,0 +1,3 @@
+sign up, sign in, and when another sign up is done, the table showing details of all users is updated without refreshing,
+
+by appending the table locally using ajax

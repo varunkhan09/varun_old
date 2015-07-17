@@ -1,0 +1,92 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+
+
+<script>
+$(document).ready(function() {
+$('#signupB').click(function()
+
+{
+$.ajax({
+url:'signup.html',
+success:function(message){
+$('#Cell3').html(message);
+}
+});
+}
+);
+}
+);
+</script>		
+
+
+
+
+<script>
+$(document).ready(function() {
+$('#signinB').click(function()
+
+{
+$.ajax({
+url:'signin.html',
+success:function(message){
+$('#Cell4').html(message);
+}
+});
+}
+);
+}
+);
+</script>
+
+
+
+</head>
+
+
+<body>
+<table align="center" width="100%">
+<tr>
+<td width="50%">
+<div id="Cell1">
+<center>
+<input type="button" id="signupB" value="Sign Up" value="SignUp">
+</center>
+</div>
+</td>
+<td width="50%">
+<div id="Cell2">
+<center>
+<input type="button" id="signinB" value="Sign In" value="SignIn">
+</center>
+</div>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+<td width="50%">
+<center>
+<div id="Cell3"></div>
+</center>
+</td>
+<td width="50%">
+
+<table align="center">
+<tr><td><center><div id="Cell4"></div></center></td></tr>
+
+<tr><td><center><div id="Cell5"></div></center></td></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<html>

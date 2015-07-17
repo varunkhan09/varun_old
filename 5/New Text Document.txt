@@ -1,0 +1,1 @@
+program to find Ip address of a domain name using ajax without reloding the page

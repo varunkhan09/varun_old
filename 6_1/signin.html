@@ -1,0 +1,51 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+
+<script>
+$(document).ready(function() {
+$('#signinBB').click(function() {
+
+$.ajax({
+url:'signin.php',
+type:'post',
+data:{
+'userid':$('#username').val(),
+'password':$('#password').val()},
+success:function(message){
+$('#signindiv').append(message);
+$.ajax({
+url:'tableloader.php',
+type:'GET',
+success:function(msg4){
+$('#Cell5').html(msg4);}
+});
+}
+});
+});
+});
+</script>
+</head>
+
+
+<body>
+<div id="signindiv">
+<table align="center">
+<tr>
+<td>User Name : </td>
+<td><input type="text" id="username"></td>
+</tr>
+
+<tr>
+<td>Password : </td>
+<td><input type="password" id="password"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="Sign In" id="signinBB"></td>
+</tr>
+</div>
+</table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+
+<script>
+$(document).ready(function() {
+$('#signupBB').click(function() 
+{
+$.ajax({
+type:'post',
+url:'signup.php',
+data:{
+'newname':$('#newname').val(),
+'newuserid':$('#newuserid').val(),
+'newpassword':$('#newpassword').val(),
+'newstate':$('#newstate').val()},
+success:function(message){
+$('#signupdiv').html("Sign Up Successful.");
+$('#modifyme').replaceWith(message);}
+});
+});
+});
+</script>
+</head>
+
+
+<body>
+<div id="signupdiv">
+<table align="center">
+<tr>
+<td>Enter Name : </td>
+<td><input type="text" id="newname"></td>
+</tr>
+
+<tr>
+<td>Enter your State : </td>
+<td><input type="text" id="newstate"></td>
+</tr>
+
+<tr>
+<td>Enter a User Name : </td>
+<td><input type="text" id="newuserid"></td>
+</tr>
+
+<tr>
+<td>Enter Password : </td>
+<td><input type="password" id="newpassword"></td>
+</tr>
+<tr>
+<td><input type="button" value="Sign Up" id="signupBB"></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
